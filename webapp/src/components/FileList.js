@@ -15,13 +15,14 @@ class FileList extends React.Component {
 
   componentDidMount() {
     let items = [];
-    fetch("http://localhost:1337/file-objects")
+    let url = document.location.href.split(':')[1];
+    fetch(url + ":1337/file-objects")
       .then(res => res.json())
       .then(
         (result) => {
           result.forEach(element => items.push({
             title: element.Titolo,
-            file: "http://localhost:1337" + element.File[0].url
+            file: url + ":1337" + element.File[0].url
           }));
           this.setState({
             isLoaded: true,

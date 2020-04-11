@@ -17,7 +17,8 @@ class News extends React.Component {
 
   componentDidMount() {
     let items = [];
-    fetch("http://localhost:1337/notizies")
+    let url = document.location.href.split(':')[1];
+    fetch(url + ":1337/notizies")
       .then(res => res.json())
       .then(
         (result) => {
@@ -25,7 +26,7 @@ class News extends React.Component {
             items.push({
               title: element.Titolo,
               text: element.Testo,
-              file: element.file ? "http://localhost:1337" + element.file.File[0].url : '',
+              file: element.file ? url + ":1337" + element.file.File[0].url : '',
               fileName: element.file ? element.file.Titolo : ''
             }));
           this.setState({

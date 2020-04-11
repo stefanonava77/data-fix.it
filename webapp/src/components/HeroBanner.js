@@ -16,7 +16,8 @@ class HeroBanner extends React.Component {
 
   componentDidMount() {
     let items = [];
-    fetch("http://localhost:1337/main-data")
+    let url = document.location.href.split(':')[1];
+    fetch(url + ":1337/main-data")
       .then(res => res.json())
       .then(
         (result) => {

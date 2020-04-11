@@ -29,8 +29,8 @@ class News extends React.Component {
             items.push({
               title: element.Titolo,
               text: element.Testo,
-              file: element.file ? url + ":1337" + element.file.File[0].url : '',
-              fileName: element.file ? element.file.Titolo : ''
+              file: element.file ? "http://" + url + ":1337" + element.File.File[0].url : '',
+              fileName: element.File ? element.File.Titolo : ''
             }));
           this.setState({
             isLoaded: true,

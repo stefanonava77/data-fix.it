@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes App-logo-spin-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    margin-top: 75px;
+}
+
+.container--white {
+    margin: 0;
+    background-color: white;
+}
+
+.container--nomargin {
+    margin: 0;
+}
+
+.section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__title {
+    display: flex;
+    width: 100%;
+    text-transform: uppercase;
+    flex: 0 0 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    padding-bottom: 35px;
+}
+
+.file-list__container {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.file-icon {
+    width: 50px;
+    height: 65px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.file-list__item {
+    display: flex;
+    text-decoration: none;
+    margin-right: 10px;
+    flex: 0 0 25%;
+    width: 25%;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+
+.file-list__item--visible{
+    transform: translateX(0);
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+.file-list__item--visible:nth-child(1n +1){
+    animation-delay: 1s;
+}
+.file-list__item--visible:nth-child(1n +2){
+    animation-delay: 2s;
+}
+.file-list__item--visible:nth-child(1n +3){
+    animation-delay: 3s;
+}
+.file-list__item--visible:nth-child(1n + 4){
+    animation-delay: 4s;
+}
+
+
+.file-list__item a {
+    text-decoration: none;
+    color: #1f2d3d;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+
+.file-list__item a:hover {
+    color: rgb(20, 79, 120);
+    border-bottom: 2px solid rgb(20, 79, 120);
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .file-list__item {
+        margin-right: 50px;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 150px;
+    }
+}

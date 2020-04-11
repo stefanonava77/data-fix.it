@@ -1,0 +1,248 @@
+.m-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    transition-duration: 0.5s;
+    transition-property: z-index;
+}
+
+.m-header-menu {
+    height: 74px;
+    transition: transform 0.5s ease-in-out;
+    margin: 0 auto;
+    border-bottom: 1px solid transparent;
+    background-color: white;
+    padding: 0;
+}
+
+.m-header-menu__logo, .m-header-menu__actions{
+    flex: 0 0 25%;
+    width: 25%;
+    height: 100%;
+    background-color: white;
+}
+
+.m-header-menu__nav{
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
+}
+
+.m-header-menu__actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.m-header-menu__logo img {
+    height: 50px;
+    width: auto;
+}
+
+.m-header-menu__logo img.logoBlue {
+    z-index: 2;
+    /*animation: App-logo-spin infinite 20s linear;*/
+}
+
+.m-header-menu__logo img.logoRed {
+    position: absolute;
+    left: 35px;
+    /*animation: App-logo-spin-reverse infinite 20s linear;*/
+}
+
+.m-header-menu__logo a {
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+}
+
+.m-header-menu__logo span {
+    text-decoration: none;
+    padding-left: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1f2d3d;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.m-header-menu__wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 25px;
+    height: 100%;
+}
+
+.m-header-menu__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+.m-header-menu__trigger-wrapper {
+    position: relative;
+}
+
+.m-header-menu__actions--wrapper{
+    display: none;
+}
+
+.m-header-menu__actions--wrapper--visible{
+    display: flex;
+}
+
+.m-header-menu__trigger {
+    cursor: pointer;
+    height: 50px;
+    width: 60px;
+    top: 2px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.m-header-menu__trigger div {
+    background: #505050;
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+.m-header-menu__trigger div:after, .m-header-menu__trigger div:before {
+    background: #505050;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    border-radius: .125rem;
+    content: "";
+}
+
+
+.m-header-menu__trigger div:before {
+    top: 15px;
+    background: #505050;
+}
+
+.m-header-menu__trigger div:after {
+    top: -10px;
+}
+
+.m-header-menu__open .m-header-menu__trigger div {
+    background-color: transparent;
+}
+
+.m-header-menu__open .m-header-menu__trigger div:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+    top: 0;
+    background: #505050;
+}
+
+.m-header-menu__open .m-header-menu__trigger div:after {
+    transform: rotate(45deg);
+    transition: all .7s ease;
+    top: 0;
+    background: #505050;
+}
+
+.m-header-menu__nav{
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-header-menu__nav{
+    opacity: 0;
+}
+
+.m-header-menu__nav--visible{
+    opacity: 1;
+}
+
+.m-header-menu__nav .m-header-menu__nav-menu{
+    opacity: 0;
+    transition: all .7s ease;
+}
+
+.m-header-menu__nav--visible .m-header-menu__nav-menu{
+    opacity: 1;
+    transition: all .7s ease;
+}
+
+.m-header-menu__item{
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #1f2d3d;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.m-header-menu__item:before{
+    width: 100%;
+    opacity: 0;
+    content: "";
+    display: block;
+    height: .125rem;
+    background: rgb(20,79,120);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    top: auto;
+    transition: all .7s ease;
+}
+
+
+.m-header-menu__item:hover:before{
+    opacity: 1;
+    width: 100%;
+    content: "";
+    display: block;
+    height: .125rem;
+    background: rgb(20,79,120);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    top: auto;
+    transition: all .7s ease;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .m-header-menu__logo {
+        flex: 0 0 75%;
+        width: 75%;
+        height: 100%;
+        background-color: white;
+    }
+    .m-header-menu__nav{
+       position: absolute;
+        top: 75px;
+        width: calc(100vw + 25px);
+        left: -25px;
+        background-color: white;
+    }
+}
+
+

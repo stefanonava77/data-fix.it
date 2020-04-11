@@ -1,0 +1,24 @@
+{
+  "name": "strapi-docker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "",
+  "author": "Stefano Nava",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@animated-burgers/burger-squeeze": "^1.1.2",
+    "chalk": "^2.4.2",
+    "execa": "^3.1.0",
+    "express": "^4.16.1",
+    "got": "^9.6.0",
+    "nodemon": "^1.18.3",
+    "semver": "^6.3.0",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1"
+  }
+}

@@ -6,6 +6,7 @@ import FileList from "./components/FileList";
 import HeroBanner from "./components/HeroBanner";
 import Contacts from "./components/Contacts";
 import News from "./components/News";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
       </div>
       <div className="container container--white">
         <Contacts/>
+      </div>
+      <div className="container container--nomargin">
+        <Footer/>
       </div>
     </div>
   );

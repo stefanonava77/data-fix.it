@@ -1,0 +1,14 @@
+.footer__text{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.footer footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__text--small{
+    font-size: 10px;
+}

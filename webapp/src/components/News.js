@@ -29,7 +29,7 @@ class News extends React.Component {
             items.push({
               title: element.Titolo,
               text: element.Testo,
-              file: element.file ? "http://" + url + ":1337" + element.File.File[0].url : '',
+              file: element.File ? "http://" + url + ":1337" + element.File.File[0].url : '',
               fileName: element.File ? element.File.Titolo : ''
             }));
           this.setState({

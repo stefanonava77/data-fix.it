@@ -17,8 +17,11 @@ class News extends React.Component {
 
   componentDidMount() {
     let items = [];
-    let url = document.location.href.split(':')[1];
-    fetch(url + ":1337/notizies")
+    let url = document.location.host;
+    if(url.indexOf(':') >= 0){
+      url = document.location.host.split(':')[0];
+    }
+    fetch("http://" + url + ":1337/notizies")
       .then(res => res.json())
       .then(
         (result) => {

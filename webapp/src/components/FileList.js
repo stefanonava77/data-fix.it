@@ -25,7 +25,7 @@ class FileList extends React.Component {
         (result) => {
           result.forEach(element => items.push({
             title: element.Titolo,
-            file: url + ":1337" + element.File[0].url
+            file: "http://" + url + ":1337" + element.File[0].url
           }));
           this.setState({
             isLoaded: true,

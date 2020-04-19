@@ -182,6 +182,7 @@
 .loaded .loader{
     opacity: 0;
     transition: all 1s ease;
+    z-index: -1;
 }
 
 .loader{

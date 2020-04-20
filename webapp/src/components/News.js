@@ -32,15 +32,16 @@ class News extends React.Component {
               file: element.File ? "http://" + url + ":1337" + element.File.File[0].url : '',
               fileName: element.File ? element.File.Titolo : ''
             }));
+
           this.setState({
             isLoaded: true,
             items: items
           });
-          console.log(items);
+
         },
         (error) => {
           this.setState({
-            isLoaded: true,
+            isLoaded: false,
             error
           });
         }
@@ -52,7 +53,7 @@ class News extends React.Component {
     const {error, isLoaded, items, sensor} = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
-    } else {
+    } else if(items.length > 0) {
       return (
         <div className="news section" data-attribute="news">
           <span className="section__title">Notizie</span>
@@ -82,6 +83,10 @@ class News extends React.Component {
             )}
           </div>
         </div>
+      );
+    } else {
+      return (
+        <div className="section section--empty"/>
       );
     }
   }

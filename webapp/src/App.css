@@ -43,6 +43,11 @@
     flex-direction: column;
 }
 
+.section--empty{
+    visibility: hidden;
+    padding: 0;
+}
+
 .section--small{
     padding-top: 25px;
     padding-bottom: 25px;
@@ -137,6 +142,7 @@
     position: relative;
     width: 80px;
     height: 80px;
+    margin-top: -250px;
 }
 .lds-ripple div {
     position: absolute;
@@ -167,10 +173,12 @@
 
 .loading .hero-text{
     opacity: 0;
+    transform: translateY(+25px);
 }
 
 .loaded .hero-text{
     opacity: 1;
+    transform: translateY(0);
     transition: all 1s ease;
 }
 
@@ -194,4 +202,25 @@
     position: absolute;
     top:0;
     background: rgba(0,0,0,.4);
+}
+
+.loading{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.loading .container--white .section{
+   visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.loading .section__title{
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.loaded .section__title{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1.5s ease;
 }

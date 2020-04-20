@@ -27,10 +27,10 @@ class FileList extends React.Component {
             title: element.Titolo,
             file: "http://" + url + ":1337" + element.File[0].url
           }));
-          this.setState({
-            isLoaded: true,
-            items: items
-          });
+              this.setState({
+                isLoaded: true,
+                items: items
+              });
         },
         (error) => {
           this.setState({
@@ -45,7 +45,7 @@ class FileList extends React.Component {
     const {error, isLoaded, items, sensor} = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
-    } else {
+    } else if (items.length > 0 ){
       return (
         <div className="file-list section" data-attribute="documents">
           <span className="section__title">Documenti</span>
@@ -71,6 +71,10 @@ class FileList extends React.Component {
             )}
           </ul>
         </div>
+      );
+    } else {
+      return (
+        <div className="section section--empty"/>
       );
     }
   }

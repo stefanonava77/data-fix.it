@@ -24,6 +24,7 @@ class Contacts extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
+
           this.setState({
             isLoaded: true,
             contactMail: result[0].EmailContatto,

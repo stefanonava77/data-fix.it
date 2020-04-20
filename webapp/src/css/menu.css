@@ -230,6 +230,9 @@
 
 
 @media only screen and (max-width: 1024px) {
+    .m-header-menu__actions--wrapper{
+        display: flex;
+    }
     .m-header-menu__logo {
         flex: 0 0 75%;
         width: 75%;

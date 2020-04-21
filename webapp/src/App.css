@@ -171,15 +171,19 @@
     }
 }
 
-.loading .hero-text{
+.loading .hero-text p{
     opacity: 0;
-    transform: translateY(+25px);
+    transform: translateY(+30px);
 }
 
-.loaded .hero-text{
+.loaded .hero-text p{
     opacity: 1;
     transform: translateY(0);
     transition: all 1s ease;
+}
+
+.loaded .hero-text p:last-child {
+   transition-delay: 0.25s;
 }
 
 .loading .loader{

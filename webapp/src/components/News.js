@@ -13,6 +13,8 @@ class News extends React.Component {
       items: [],
       sensor: true,
     };
+
+    this.stopSensor = this.stopSensor.bind(this);
   }
 
   componentDidMount() {
@@ -48,6 +50,13 @@ class News extends React.Component {
       )
   }
 
+  stopSensor(e) {
+    this.setState({
+      sensor: false,
+    });
+  }
+
+
 
   render() {
     const {error, isLoaded, items, sensor} = this.state;
@@ -59,10 +68,10 @@ class News extends React.Component {
           <span className="section__title">Notizie</span>
           <div className="news__container">
             {items.map(item =>
-              <VisibilitySensor scrollThrottle={100} key={item.title} active={sensor} partialVisibility={true}>
+              <VisibilitySensor onChange={this.stopSensor} scrollThrottle={100} key={item.title} active={sensor} partialVisibility={true}>
                 {({isVisible}) => {
                   return (
-                    <div className={isVisible ? "news__item news__item--visible" : "news__item"} key={item.title}>
+                    <div className={isVisible || !sensor ? "news__item news__item--visible" : "news__item"} key={item.title}>
                       <span className="news__item-title">{item.title}</span>
                       <div className="news__item-text">
                         <ReactMarkdown source={item.text}/>
@@ -78,6 +87,7 @@ class News extends React.Component {
                       </div>
                     </div>
                   );
+
                 }}
               </VisibilitySensor>
             )}

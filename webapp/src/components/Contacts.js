@@ -28,7 +28,8 @@ class Contacts extends React.Component {
           this.setState({
             isLoaded: true,
             contactMail: result[0].EmailContatto,
-            openTime: result[0].Orari
+            openTime: result[0].Orari,
+            phoneNumber: result[0].Telefono
           });
         },
         (error) => {
@@ -42,7 +43,7 @@ class Contacts extends React.Component {
 
 
   render() {
-    const {error, isLoaded, contactMail, openTime} = this.state;
+    const {error, contactMail, openTime, phoneNumber} = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else {
@@ -57,7 +58,12 @@ class Contacts extends React.Component {
             </div>
             <div className="contacts__item">
               <span className="contact__title">I nostri contatti</span>
-              <a href={"mailto:" + contactMail} className="contact__mail">{contactMail}</a>
+              <div className="contact__subitem">
+                <a href={"mailto:" + contactMail} className="contact__mail">{contactMail}</a>
+              </div>
+              <div className="contact__subitem">
+                <a href={"tel:" + phoneNumber} className="contact__tel">{phoneNumber}</a>
+              </div>
             </div>
           </div>
 

@@ -117,14 +117,14 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border-bottom: 2px solid transparent;
 }
 
 
 .file-list__item a:hover {
     color: rgb(20, 79, 120);
-    border-bottom: 2px solid rgb(20, 79, 120);
+    text-decoration: underline;
 }
+
 
 
 @media only screen and (min-width: 1024px) {

@@ -11,6 +11,7 @@ class FileList extends React.Component {
       items: [],
       sensor: true,
     };
+    this.stopSensor = this.stopSensor.bind(this);
   }
 
   componentDidMount() {
@@ -41,6 +42,13 @@ class FileList extends React.Component {
       )
   }
 
+  stopSensor(e) {
+    this.setState({
+      sensor: false,
+    });
+  }
+
+
   render() {
     const {error, isLoaded, items, sensor} = this.state;
     if (error) {
@@ -51,10 +59,10 @@ class FileList extends React.Component {
           <span className="section__title">Documenti</span>
           <ul className="file-list__container">
             {items.map(item =>
-              <VisibilitySensor scrollThrottle={100} key={item.title} active={sensor} partialVisibility={true}>
+              <VisibilitySensor onChange={this.stopSensor} scrollThrottle={100} key={item.title} active={sensor} partialVisibility={true}>
                 {({isVisible}) => {
                   return (
-                    <li className={isVisible ? "file-list__item file-list__item--visible" : "file-list__item"} key={item.title}>
+                    <li className={isVisible || !sensor ? "file-list__item file-list__item--visible" : "file-list__item"} key={item.title}>
                       <a target="_blank"
                          href={item.file}>
                 <span className="file-icon">

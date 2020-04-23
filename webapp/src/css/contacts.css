@@ -28,3 +28,17 @@
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+
+.contact__subitem{
+    margin-bottom: 10px;
+    color: rgb(20, 79, 120);
+}
+
+.contact__subitem a {
+    color: rgb(20, 79, 120);
+    text-decoration: none;
+}
+
+.contact__subitem a:hover {
+    text-decoration: underline;
+}

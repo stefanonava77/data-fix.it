@@ -79,7 +79,7 @@
 .file-list__item {
     display: flex;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
     flex: 0 0 25%;
     width: 25%;
     transform: translateX(-100px);
@@ -95,16 +95,16 @@
 }
 
 .file-list__item--visible:nth-child(1n +1){
-    animation-delay: 1s;
+    transition-delay: 0.5s;
 }
 .file-list__item--visible:nth-child(1n +2){
-    animation-delay: 2s;
+    transition-delay: 0.7s;
 }
 .file-list__item--visible:nth-child(1n +3){
-    animation-delay: 3s;
+    transition-delay: 1s;
 }
 .file-list__item--visible:nth-child(1n + 4){
-    animation-delay: 4s;
+    transition-delay: 1.3s;
 }
 
 

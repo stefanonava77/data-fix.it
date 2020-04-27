@@ -6,7 +6,6 @@ import HeroBanner from "./components/HeroBanner";
 import Contacts from "./components/Contacts";
 import News from "./components/News";
 import Footer from "./components/Footer";
-import HeroImage from "./images/sfondo.jpg";
 
 class App extends React.Component {
 
@@ -19,7 +18,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let items = [];
     let url = document.location.host;
     if (url.indexOf(':') >= 0) {
       url = document.location.host.split(':')[0];

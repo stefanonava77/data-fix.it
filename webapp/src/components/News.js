@@ -27,7 +27,7 @@ class News extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
-          result.forEach(element =>
+          result.reverse().forEach(element =>
             items.push({
               title: element.Titolo,
               text: element.Testo,
@@ -59,7 +59,7 @@ class News extends React.Component {
 
 
   render() {
-    const {error, isLoaded, items, sensor} = this.state;
+    const {error, items, sensor} = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if(items.length > 0) {
@@ -77,7 +77,7 @@ class News extends React.Component {
                         <ReactMarkdown source={item.text}/>
                         {item.file.length > 0 && (
                           <a className="news__item-file" target="_blank"
-                             href={item.file}>
+                             href={item.file} rel="noopener noreferrer">
                              <span>
                                 <svg viewBox="0 0 21 20" id="document"><g transform="translate(1)" strokeWidth="2" stroke="#505050" fill="none" fillRule="evenodd"><g transform="rotate(45 3.478 11.569)" strokeLinecap="square"><path d="M.5.5L8.936 9M4.576 9.5H9M9.5 4.576V9"/></g><path d="M0 12.183v6h18.386v-6"/></g></svg>
                             </span>

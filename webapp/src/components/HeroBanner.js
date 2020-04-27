@@ -1,5 +1,4 @@
 import React from "react";
-import HeroImage from '../images/sfondo.jpg';
 import '../css/hero-banner.css';
 import ReactMarkdown from "react-markdown";
 
@@ -15,7 +14,6 @@ class HeroBanner extends React.Component {
   }
 
   componentDidMount() {
-    let items = [];
     let url = document.location.host;
     if(url.indexOf(':') >= 0){
       url = document.location.host.split(':')[0];

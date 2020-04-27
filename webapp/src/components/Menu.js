@@ -61,7 +61,6 @@ class Menu extends React.Component {
   }
 
   handleScroll() {
-    const headerHeight = "75";
     let lastScrollTop = 0;
     let delta = 0;
     let scrollTop = window.pageYOffset !== undefined

@@ -1,4 +1,5 @@
 import React from "react";
+import HeroImage from '../images/sfondo.jpg';
 import '../css/hero-banner.css';
 import ReactMarkdown from "react-markdown";
 
@@ -43,13 +44,11 @@ class HeroBanner extends React.Component {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return  <div className="hero-banner">
-        {/*<img className="hero-image" src={HeroImage} alt="data-fix"/>*/}
       </div>;
     } else {
       return (
         <div className="hero-banner">
           <h1 className="hero-text">  <ReactMarkdown source={bannerText}/></h1>
-          {/*<img className="hero-image" src={HeroImage} alt="data-fix"/>*/}
         </div>
       );
     }

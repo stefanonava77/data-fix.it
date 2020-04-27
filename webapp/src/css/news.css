@@ -72,6 +72,8 @@
     font-size: 18px;
     font-weight: bold;
     padding-bottom: 10px;
+    min-height: 54px;
+    text-transform: uppercase;
 }
 
 .news__item-text {
@@ -79,6 +81,7 @@
     flex-direction: column;
     background-color: #f9f9f9;
     padding: 15px;
+    height: calc(100% - 50px);
 }
 
 .news__item-text p{

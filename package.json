@@ -1,24 +1,37 @@
 {
-  "name": "strapi-docker",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": "",
-  "author": "Stefano Nava",
-  "license": "MIT",
+  "name": "app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
   "scripts": {
-    "lint": "eslint ."
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
-    "@animated-burgers/burger-squeeze": "^1.1.2",
-    "chalk": "^2.4.2",
-    "execa": "^3.1.0",
-    "express": "^4.16.1",
-    "got": "^9.6.0",
-    "nodemon": "^1.18.3",
-    "semver": "^6.3.0",
-    "yargs": "^14.2.0"
+    "strapi": "3.1.1",
+    "strapi-admin": "3.1.1",
+    "strapi-utils": "3.1.1",
+    "strapi-plugin-content-type-builder": "3.1.1",
+    "strapi-plugin-content-manager": "3.1.1",
+    "strapi-plugin-users-permissions": "3.1.1",
+    "strapi-plugin-email": "3.1.1",
+    "strapi-plugin-upload": "3.1.1",
+    "strapi-connector-bookshelf": "3.1.1",
+    "knex": "<0.20.0",
+    "sqlite3": "latest"
   },
-  "devDependencies": {
-    "eslint": "^6.5.1"
-  }
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "97ab768f-c6f4-4d96-900e-7411780ea733"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }

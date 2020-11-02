@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "main_data",
+  "info": {
+    "name": "MainData"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "TestoBanner": {
+      "type": "richtext"
+    },
+    "EmailContatto": {
+      "type": "email"
+    },
+    "Orari": {
+      "type": "richtext"
+    },
+    "Telefono": {
+      "type": "string"
+    }
+  }
+}

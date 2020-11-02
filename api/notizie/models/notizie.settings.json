@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notizies",
+  "info": {
+    "name": "Notizie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titolo": {
+      "type": "string"
+    },
+    "Testo": {
+      "type": "richtext"
+    },
+    "File": {
+      "model": "file-object"
+    }
+  }
+}

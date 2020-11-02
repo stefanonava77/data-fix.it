@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "file_objects",
+  "info": {
+    "name": "FileObject"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titolo": {
+      "type": "string",
+      "required": true
+    },
+    "File": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Data": {
+      "type": "datetime"
+    }
+  }
+}

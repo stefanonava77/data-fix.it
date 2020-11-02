@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/notizies",
+      "handler": "notizie.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/notizies/count",
+      "handler": "notizie.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/notizies/:id",
+      "handler": "notizie.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/notizies",
+      "handler": "notizie.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/notizies/:id",
+      "handler": "notizie.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/notizies/:id",
+      "handler": "notizie.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

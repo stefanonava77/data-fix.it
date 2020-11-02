@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/file-objects",
+      "handler": "file-object.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/file-objects/count",
+      "handler": "file-object.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/file-objects/:id",
+      "handler": "file-object.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/file-objects",
+      "handler": "file-object.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/file-objects/:id",
+      "handler": "file-object.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/file-objects/:id",
+      "handler": "file-object.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

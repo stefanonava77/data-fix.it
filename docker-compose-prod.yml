@@ -3,6 +3,8 @@ version: '3'
 services:
   strapi-new:
     image: strapi/strapi
+    environment:
+      - NODE_ENV=production
     volumes:
       - ./:/srv/app
     ports:
